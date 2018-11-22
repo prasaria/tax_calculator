@@ -3,22 +3,21 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+Make sure you have docker and docker-compose in your local PC.
 
-* Ruby version
+How to start this application using docker-compose:
 
-* System dependencies
+* Clone this repository to your local
 
-* Configuration
+* Open the project directory on your favorite text editor
 
-* Database creation
+* Build docker image using: docker-compose build
 
-* Database initialization
+* Create Database: docker-compose run app rails db:create
 
-* How to run the test suite
+* Do migration for changed in database schema: docker-compose run app rails db:migrate
 
-* Services (job queues, cache servers, search engines, etc.)
+* Run tax_calculator rails api application by using this command: docker-compose up
 
-* Deployment instructions
+* Go to http://localhost:3003/ and make sure you got the default rails application welcome page
 
-* ...
