@@ -25,6 +25,9 @@ gem 'puma', '~> 3.11'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# Pagination library for Rails, Sinatra, Merb, DataMapper
+gem 'will_paginate', '~> 3.1.0'
+
 gem 'active_model_serializers'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
