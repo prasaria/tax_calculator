@@ -1,0 +1,4 @@
+class Errors
+  VALIDATION_CODE = 'VALIDATION'
+  RAILS_CODE = 'RAILS'
+end

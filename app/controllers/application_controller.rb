@@ -5,6 +5,7 @@ class ApplicationController < ActionController::API
   rescue_from ActiveRecord::RecordInvalid, with: :record_invalid
   rescue_from Errors::ValidationError, with: :unprocessible_entity
 
+  include Api::V1 
   include ActionController::Serialization
 
   private
@@ -24,7 +25,7 @@ class ApplicationController < ActionController::API
     },
     status: :bad_request
   end
-
+  
   def render_record_not_unique(exception)
     render json: {
       errors: { message: exception.message },
@@ -44,5 +45,6 @@ class ApplicationController < ActionController::API
   def unprocessible_entity(exception)
     render json: {errors: exception.errors}, status: exception.status, code: exception.code
   end
+
 
 end
