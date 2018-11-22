@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_22_121143) do
+ActiveRecord::Schema.define(version: 2018_11_22_143914) do
 
   create_table "tax_products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.integer "tax_code", null: false
-    t.decimal "access", precision: 10, null: false
+    t.decimal "price", precision: 10, null: false
+    t.index ["name"], name: "index_tax_products_on_name", unique: true
   end
 
 end
