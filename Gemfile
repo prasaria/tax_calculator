@@ -35,7 +35,17 @@ gem 'active_model_serializers'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'capybara'
+  # Rails >= 3 pry initializer
+  gem 'pry-rails'
+  # Step-by-step debugging and stack navigation in Pry
+  gem 'pry-byebug'
+  gem "factory_bot_rails", "~> 4.0"
+  # help to kill N+1 queries and unused eager loading
+  gem 'bullet'
+  # generation for fake data
+  gem 'faker'
 end
 
 group :development do
@@ -43,7 +53,15 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Annotate Rails classes with schema and routes info
+  gem 'annotate'
 end
+
+# group :test do
+#   gem 'rspec-rails'
+#   gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
+#   gem 'database_cleaner'
+# end
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
