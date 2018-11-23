@@ -20,6 +20,7 @@ module View
     def initialize(tax_product)
       # static tax_code, tax_code 1 = Food & Beverage, tax_code 2 = Tobacco, tax_code 3 = Entertainment
       @id = tax_product.id
+      @name = tax_product.name
       @tax_code = tax_product.tax_code
       @price = tax_product.price
       set_view_attributes()
