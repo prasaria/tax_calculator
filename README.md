@@ -13,11 +13,11 @@ How to start this application using docker-compose:
 
 * Build docker image using: docker-compose build
 
+* Run tax_calculator rails api application by using this command: docker-compose up
+
 * Create Database: docker-compose run app rails db:create
 
 * Do migration for changed in database schema: docker-compose run app rails db:migrate
-
-* Run tax_calculator rails api application by using this command: docker-compose up
 
 * Go to http://localhost:3003/ and make sure you got the default rails application welcome page
 
