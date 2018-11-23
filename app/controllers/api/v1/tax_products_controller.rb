@@ -58,7 +58,7 @@ module Api
       end
     
       def filter_params
-        params.permit(:name, :tax_code)
+        params.permit(:name, :tax_code, :page, :per_page)
       end
     
       def update_params
