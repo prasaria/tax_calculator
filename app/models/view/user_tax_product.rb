@@ -15,7 +15,7 @@ module View
   # }
   class UserTaxProduct < ActiveModelSerializers::Model
     # :id refers to :entity_id in Product table.
-    attributes :id, :tax_code, :type, :refundable, :price,  :tax, :amount
+    attributes :id, :name, :tax_code, :type, :refundable, :price,  :tax, :amount
 
     def initialize(tax_product)
       # static tax_code, tax_code 1 = Food & Beverage, tax_code 2 = Tobacco, tax_code 3 = Entertainment
